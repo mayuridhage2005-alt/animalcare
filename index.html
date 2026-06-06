@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AnimalCare</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <h2>AnimalCare</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#camps">Camps</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <div>
+                <h1>Caring For Every Life</h1>
+                <p>Rescue . Protect . Rehabilitate</p>
+                
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>
+                         We are a dedicated animal care organization committed to rescuing,
+                        treating, and protecting animals in need. Our mission is to ensure
+                        that every animal receives proper medical care, shelter, and the
+                        compassion they deserve.
+                    </p>
+
+                    <p>
+                        Through regular rescue operations and veterinary support, we work
+                        to rehabilitate injured, abandoned, and neglected animals. Our team
+                        of volunteers and professionals strives to create a safe and nurturing
+                        environment for every life we touch.
+                    </p>
+
+                    <p>
+                        In addition to rescue efforts, we actively conduct awareness camps
+                        and community programs to educate people about animal welfare,
+                        responsible care, and coexistence with nature.
+                    </p>
+
+                    <p>
+                        From domestic pets like dogs and cats to birds and other animals,
+                        we believe every life matters. Our goal is to give them a second
+                        chance at life and build a more compassionate world.
+                    </p>
+                </div>
+                <div class="about-image">
+                     <img src="https://th.bing.com/th/id/R.a310fdb51d3700fe882b425a7b7518e3?rik=Q%2b0qIPvOSxLYvg&riu=http%3a%2f%2fhdwallpapers2013.com%2fwp-content%2fuploads%2f2012%2f10%2fbirds-wallpaper-free-download.jpg&ehk=IVhO%2bbosf3JC604mCgG0TZzfvEaCYV%2fYMOUD%2fduzcNQ%3d&risl=&pid=ImgRaw&r=0" alt="Animal Care">
+                </div>
+            </div>
+        </section>
+
+       <section class="features">
+
+  <!-- LEFT SIDE -->
+            <div class="accordion">
+                <button class="btn active" data-img="https://static.vecteezy.com/system/resources/thumbnails/025/799/491/small_2x/ai-generate-rabbit-sitting-on-a-grass-background-free-photo.jpg">
+                <i class="fas fa-paw"></i>   Rescue
+                </button>
+                <div class="content show">
+                    <p>
+                        We actively rescue injured, abandoned, and distressed animals from
+                        unsafe environments. Our team responds quickly to emergency situations,
+                        ensuring animals are safely transported to our care centers where they
+                        receive immediate attention, protection, and compassion.
+                    </p>
+                </div>
+
+                <button class="btn" data-img="https://www.thestatesman.com/wp-content/uploads/2019/03/Helping-injured-dog-1024x683.jpg">
+                <i class="fas fa-stethoscope"></i>  Treatment
+                </button>
+                <div class="content">
+                    <p>
+                        Our organization provides complete medical support including first aid,
+                        surgeries, vaccinations, and ongoing treatment. With the help of
+                        experienced veterinarians, we ensure every animal receives proper
+                        healthcare and continuous monitoring for a healthy recovery.
+                    </p>
+                </div>
+
+                <button class="btn" data-img="https://thumbs.dreamstime.com/b/mother-cow-tenderly-touches-her-baby-calf-lush-green-field-cows-natural-habitat-gentle-animal-interaction-countryside-farm-338333646.jpg">
+                <i class="fas fa-heart"></i>   Rehabilitation
+                </button>
+                <div class="content">
+                    <p>
+                        After treatment, animals go through a rehabilitation process where we
+                        focus on both physical healing and emotional well-being. We create a
+                        safe and nurturing environment that helps them regain strength,
+                        confidence, and prepare for a better life ahead.
+                    </p>
+                </div>
+
+                <button class="btn" data-img="https://ofhorse.com/wp-content/uploads/2025/10/how-environment-affects-horse-behavior-featured.webp">
+                <i class="fas fa-bullhorn"></i>  Awareness Camps
+                </button>
+                <div class="content">
+                    <p>
+                        We conduct awareness camps and community programs to educate people
+                        about animal welfare, responsible pet care, and coexistence with nature.
+                        These initiatives help build compassion and encourage society to take
+                        active steps in protecting animals.
+                    </p>
+                </div>
+
+            </div>
+
+  <!-- RIGHT SIDE -->
+            <div class="image-box">
+                <img id="mainImage" src="https://static.vecteezy.com/system/resources/thumbnails/025/799/491/small_2x/ai-generate-rabbit-sitting-on-a-grass-background-free-photo.jpg">
+            </div>
+        </section>
+<script>
+  const buttons = document.querySelectorAll(".btn");
+  const contents = document.querySelectorAll(".content");
+  const image = document.getElementById("mainImage");
+
+  buttons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+
+      // close all
+      buttons.forEach(b => b.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("show"));
+
+      // open clicked
+      btn.classList.add("active");
+      contents[index].classList.add("show");
+
+      // change image
+      image.src = btn.getAttribute("data-img");
+    });
+  });
+</script>
+        <section id="camps" class="camps">
+            <h2>Camps & Events</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="">
+                    <h3>Vaccination Camp</h3>
+                    <p>Mumbai | June 2026</p>
+                    <p>
+                        Free vaccination drive for stray animals with expert veterinary care.
+                    </p>
+                    <button onclick="location.href='vaccination.html'">Learn More</button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1" alt="" >
+                    <h3>Rescue Awareness Camp</h3>
+                    <p>Pune | July 2026</p>
+                    <p>
+                        Awareness program teaching people how to help injured animals.
+                    </p>
+                    <button onclick="location.href='awareness.html'">Learn More</button>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19">
+                    
+                        <h3>Adoption Drive</h3>
+                        <p class="date">Mumbai | August 2026</p>
+                        <p>
+                        Find loving homes for rescued animals and promote adoption.
+                        </p>
+                        <button onclick="location.href='adoption.html'">Learn More</button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="stories">
+            <h2>Rescue Stories</h2>
+
+            <!-- STORY 1 -->
+                <div class="story-row">
+
+                <!-- LEFT: IMAGES -->
+                    <div class="story-images">
+                        <img src="https://images.hindustantimes.com/img/2022/09/07/1600x900/ashwini-chaudhary-monty-fSGSAaxzXfM-unsplash_1662535327381_1662535398649_1662535398649.jpg">
+                    </div>
+
+                    <!-- RIGHT: TEXT -->
+                    <div class="story-content">
+                        <h3>Bruno the Dog</h3>
+                            <p>
+                                Bruno was found severely injured on a roadside, unable to walk and in deep pain. 
+                                Our rescue team quickly responded and provided immediate medical attention. 
+                                After weeks of treatment, care, and rehabilitation, Bruno made a full recovery.
+                                Today, he is healthy, active, and living happily with a loving family.
+                            </p>
+                    </div>
+                </div>
+
+                <!-- STORY 2 -->
+                <div class="story-row reverse">
+
+                    <div class="story-images">
+                        <img src=https://pawkitty.com/wp-content/uploads/2024/03/Exploring-the-Evolutionary-History-of-Domestic-Cats.jpg>
+                    </div>
+
+                    <div class="story-content">
+                        <h3>Chloe the Cat</h3>
+                        <p>
+                            Chloe was suffering from a severe infection and was found in a weak condition. 
+                            With proper medical treatment and continuous monitoring, she gradually regained her strength.
+                            After recovery, Chloe was adopted into a caring home where she now enjoys a safe and joyful life.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="stats">
+                    <div class="stats-container">
+
+                        <div class="stat-box">
+                            <h2>500+</h2>
+                            <p>Animals Rescued</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h2>300+</h2>
+                            <p>Animals Treated</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h2>200+</h2>
+                            <p>Successful Adoptions</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <h2>50+</h2>
+                            <p>Awareness Camps</p>
+                        </div>
+
+                    </div>
+                </section>
+
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+
+            <div class="contact-container">
+            <!-- LEFT: INFO -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you. Join us in making a difference.</p>
+
+                    <p>📍 Mumbai, India</p>
+                    <p>📞 9876543210</p>
+                    <p>📧 animalcare@gmail.com</p>
+                </div>
+
+             <!-- RIGHT: FORM -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+            </div>
+        </section>
+    </body>
+</html>
