@@ -160,6 +160,16 @@ section {
     padding: 80px 20px;
     text-align: center;
 }
+
+@media (max-width: 1024px){
+  .cards{
+    flex-wrap: wrap;
+  }
+
+  .card{
+    width: 45%;
+  }
+}
      
 .features {
     display: flex;
@@ -232,6 +242,35 @@ section {
 .btn i{
     margin-right: 10px;
     color: #7b6146;
+}
+@media (max-width: 768px){
+
+  .features{
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .accordion{
+    padding: 20px;
+  }
+
+  .btn{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .content{
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .image-box{
+    height: 250px;
+  }
+
+  .image-box img{
+    height: 100%;
+  }
 }
 
 .stories{
